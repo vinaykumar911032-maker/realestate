@@ -70,13 +70,14 @@ const revealPage = () => {
 
 safeCreateIcons();
 document.body.classList.add("no-scroll");
+const splashDelay = 1600;
 document.addEventListener("DOMContentLoaded", () => {
-  window.setTimeout(revealPage, 3200);
+  window.setTimeout(revealPage, splashDelay);
 });
 window.addEventListener("load", () => {
-  window.setTimeout(revealPage, 3000);
+  window.setTimeout(revealPage, splashDelay);
 });
-window.setTimeout(revealPage, 3600);
+window.setTimeout(revealPage, 2200);
 
 const toast = document.querySelector("#toast");
 let toastTimer;
