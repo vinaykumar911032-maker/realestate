@@ -65,8 +65,15 @@
       }
     </script>
   </head>
-  <body>
-    <div class="top-strip">
+  <body class="loading">
+    <div class="splash-screen" id="splashScreen" aria-hidden="true">
+      <div class="splash-logo-wrap">
+        <img src="assets/vigneshwara-logo.png" alt="Vigneshwara Properties logo" />
+      </div>
+    </div>
+
+    <div class="page-content" id="pageContent">
+      <div class="top-strip">
       <span>F94F+53C, Jubilee Enclave, HITEC City, Hyderabad, Telangana 500081</span>
       <div class="top-actions">
         <a href="#contact">Call</a>
@@ -89,13 +96,14 @@
         <a href="#properties">Properties</a>
         <a href="#services">Services</a>
         <a href="#locations">Locations</a>
+        <a href="#faq">FAQ</a>
         <a href="#blogs">Blogs</a>
         <a class="nav-cta" href="#contact">Contact Us</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero reveal">
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -109,23 +117,51 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#properties">
-              Explore Properties <i data-lucide="arrow-right"></i>
+              Find Office Space Now <i data-lucide="arrow-right"></i>
             </a>
             <a class="btn btn-ghost" href="#contact">
               Book Site Visit <i data-lucide="calendar-check"></i>
             </a>
           </div>
+          <div class="hero-meta">
+            <span><i data-lucide="badge-check"></i> Verified listings</span>
+            <span><i data-lucide="clock-3"></i> Fast site visits</span>
+            <span><i data-lucide="map-pinned"></i> Hyderabad business hubs</span>
+          </div>
         </div>
       </section>
 
       <section class="metrics-band">
-        <div><strong>500+</strong><span>Commercial Properties</span></div>
-        <div><strong>100+</strong><span>Happy Clients</span></div>
-        <div><strong>10+</strong><span>Years Experience</span></div>
-        <div><strong>24 hr</strong><span>Visit Scheduling</span></div>
+        <div><strong class="count-up" data-target="500">0</strong><span>Commercial Properties</span></div>
+        <div><strong class="count-up" data-target="100">0</strong><span>Happy Clients</span></div>
+        <div><strong class="count-up" data-target="10">0</strong><span>Years Experience</span></div>
+        <div><strong class="count-up" data-target="24">0</strong><span>Visit Scheduling</span></div>
       </section>
 
-      <section class="section split-section" id="about">
+      <section class="section trust-strip reveal" aria-label="Trust highlights">
+        <article class="trust-card">
+          <i data-lucide="badge-check"></i>
+          <h3>Verified Spaces</h3>
+          <p>Shortlisted locations with clear availability and practical fit for your team.</p>
+        </article>
+        <article class="trust-card">
+          <i data-lucide="users-round"></i>
+          <h3>Trusted by Businesses</h3>
+          <p>Used by founders, facility teams and investors looking for faster decisions.</p>
+        </article>
+        <article class="trust-card">
+          <i data-lucide="clock-3"></i>
+          <h3>Fast Site Visits</h3>
+          <p>Book a walkthrough quickly and compare your top options without delay.</p>
+        </article>
+        <article class="trust-card">
+          <i data-lucide="map-pinned"></i>
+          <h3>Local Market Advice</h3>
+          <p>Get access insights, growth corridors and nearby business context before you move.</p>
+        </article>
+      </section>
+
+      <section class="section split-section reveal" id="about">
         <div>
           <p class="eyebrow dark">About Vigneshwara Properties</p>
           <h2>Hyderabad-focused commercial property specialists.</h2>
@@ -144,11 +180,43 @@
         </div>
       </section>
 
-      <section class="section light" id="properties">
+      <section class="section light reveal" id="properties">
         <div class="section-heading">
           <p class="eyebrow dark">Featured Properties</p>
           <h2>Premium spaces ready for shortlisting.</h2>
           <a href="#contact">Request full inventory</a>
+        </div>
+
+        <div class="property-toolbar">
+          <form class="property-search" id="propertySearch">
+            <label>
+              <span>Location</span>
+              <select name="location">
+                <option value="">All locations</option>
+                <option value="HITEC City">HITEC City</option>
+                <option value="Financial District">Financial District</option>
+                <option value="Madhapur">Madhapur</option>
+                <option value="Gachibowli">Gachibowli</option>
+              </select>
+            </label>
+            <label>
+              <span>Type</span>
+              <select name="type">
+                <option value="">All types</option>
+                <option value="Office Spaces">Office Spaces</option>
+                <option value="Commercial Buildings">Commercial Buildings</option>
+                <option value="Retail Shops">Retail Shops</option>
+                <option value="Coworking Spaces">Coworking Spaces</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Show matches</button>
+          </form>
+          <div class="deal-tabs" role="tablist" aria-label="Property deal type">
+            <button type="button" class="active" data-deal="All">All</button>
+            <button type="button" data-deal="Rent">Rent</button>
+            <button type="button" data-deal="Lease">Lease</button>
+            <button type="button" data-deal="Sale">Sale</button>
+          </div>
         </div>
 
         <div class="property-grid" id="propertyGrid">
@@ -234,7 +302,7 @@
         </div>
       </section>
 
-      <section class="section services-section" id="services">
+      <section class="section services-section reveal" id="services">
         <div class="section-heading inverse">
           <p class="eyebrow">Services</p>
           <h2>Rent, lease, sale and advisory under one roof.</h2>
@@ -250,7 +318,52 @@
         </div>
       </section>
 
-      <section class="section" id="locations">
+      <section class="section light process-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow dark">How It Works</p>
+          <h2>Three simple steps to the right commercial space.</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Share your requirement</h3>
+            <p>Tell us your preferred area, budget, team size and whether you need rent, lease or sale.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Shortlist the best options</h3>
+            <p>We compare suitable spaces in the most relevant business corridors and share the best fits quickly.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Schedule a site visit</h3>
+            <p>Book a walkthrough, inspect the property in person and move forward with confidence.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow dark">Frequently Asked Questions</p>
+          <h2>Helpful answers before you enquire.</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Do you help with office rentals and leases?</summary>
+            <p>Yes. We support office rentals, office leases, retail spaces and commercial property sales across Hyderabad.</p>
+          </details>
+          <details>
+            <summary>How fast can I book a site visit?</summary>
+            <p>Most visits can be arranged within 24 hours depending on the property availability and your preferred time.</p>
+          </details>
+          <details>
+            <summary>Can you help if I am comparing multiple locations?</summary>
+            <p>Absolutely. We can compare HITEC City, Gachibowli, Madhapur, Financial District and other areas based on your business needs.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="locations">
         <div class="section-heading">
           <p class="eyebrow dark">Featured Locations</p>
           <h2>Hyderabad's strongest commercial corridors.</h2>
@@ -267,7 +380,7 @@
         </div>
       </section>
 
-      <section class="section light why-section">
+      <section class="section light why-section reveal">
         <div class="why-image"></div>
         <div class="why-content">
           <p class="eyebrow dark">Why Choose Us</p>
@@ -284,7 +397,7 @@
         </div>
       </section>
 
-      <section class="section" id="blogs">
+      <section class="section reveal" id="blogs">
         <div class="section-heading">
           <p class="eyebrow dark">Latest Insights</p>
           <h2>Commercial property notes for Hyderabad businesses.</h2>
@@ -296,28 +409,37 @@
         </div>
       </section>
 
-      <section class="section testimonials">
+      <section class="section testimonials reveal">
         <div class="section-heading inverse">
           <p class="eyebrow">Testimonials</p>
           <h2>Trusted by business teams looking for clarity.</h2>
         </div>
-        <div class="testimonial-grid">
-          <blockquote>
-            "The team understood our expansion requirements and gave us a focused shortlist near HITEC City."
-            <cite>Facilities Head, IT Services Company</cite>
-          </blockquote>
-          <blockquote>
-            "We needed a retail location with visibility and parking. Their local knowledge made the decision easier."
-            <cite>Founder, Retail Brand</cite>
-          </blockquote>
-          <blockquote>
-            "The comparison between lease options was clear, practical and quick."
-            <cite>Director, Growth-stage Startup</cite>
-          </blockquote>
+        <div class="testimonial-slider">
+          <button class="slider-btn" type="button" aria-label="Previous testimonial">←</button>
+          <div class="testimonial-track">
+            <blockquote class="testimonial-slide active">
+              "The team understood our expansion requirements and gave us a focused shortlist near HITEC City."
+              <cite>Facilities Head, IT Services Company</cite>
+            </blockquote>
+            <blockquote class="testimonial-slide">
+              "We needed a retail location with visibility and parking. Their local knowledge made the decision easier."
+              <cite>Founder, Retail Brand</cite>
+            </blockquote>
+            <blockquote class="testimonial-slide">
+              "The comparison between lease options was clear, practical and quick."
+              <cite>Director, Growth-stage Startup</cite>
+            </blockquote>
+          </div>
+          <button class="slider-btn" type="button" aria-label="Next testimonial">→</button>
+        </div>
+        <div class="slider-dots" aria-label="Testimonial navigation">
+          <button class="slider-dot active" type="button" aria-label="Show testimonial 1"></button>
+          <button class="slider-dot" type="button" aria-label="Show testimonial 2"></button>
+          <button class="slider-dot" type="button" aria-label="Show testimonial 3"></button>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
+      <section class="section contact-section reveal" id="contact">
         <div>
           <p class="eyebrow dark">Contact Us</p>
           <h2>Tell us what kind of commercial space you need.</h2>
@@ -452,11 +574,16 @@
         <a href="#properties">Properties</a>
         <a href="#services">Services</a>
         <a href="#locations">Locations</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
     </footer>
+    <div class="footer-credit">
+      Designed & Developed by <strong>IntellionLabs</strong>
+    </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>
   </body>
