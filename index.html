@@ -90,6 +90,10 @@
       <button class="menu-toggle" type="button" aria-label="Open menu">
         <i data-lucide="menu"></i>
       </button>
+      <div class="sticky-cta-bar" aria-label="Quick action bar">
+        <a class="btn btn-primary" href="#contact">Book a Visit</a>
+        <a class="btn btn-ghost" href="https://wa.me/910000000000?text=Hello%20Vigneshwara%20Properties%2C%20I%20need%20help%20finding%20commercial%20space." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#about">About</a>
@@ -109,12 +113,13 @@
         <div class="hero-content">
           <img class="hero-logo" src="assets/vigneshwara-logo.png" alt="Vigneshwara Properties" />
           <p class="eyebrow">Rent | Lease | Sale</p>
-          <h1>Offices and Commercial Spaces</h1>
+          <h1>Hyderabad commercial spaces that close faster.</h1>
           <p class="hero-copy">
-            Vigneshwara Properties helps businesses rent, lease and buy offices
-            and commercial spaces across HITEC City and Hyderabad's strongest
-            business corridors.
+            Vigneshwara Properties delivers verified office, retail and corporate
+            spaces in Hyderabad with same-day shortlist support and fast site
+            visits for your team.
           </p>
+          <p class="hero-flag">Top Hyderabad business districts, quick shortlist, and verified corporate-grade spaces.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#properties">
               Find Office Space Now <i data-lucide="arrow-right"></i>
@@ -127,6 +132,11 @@
             <span><i data-lucide="badge-check"></i> Verified listings</span>
             <span><i data-lucide="clock-3"></i> Fast site visits</span>
             <span><i data-lucide="map-pinned"></i> Hyderabad business hubs</span>
+          </div>
+          <div class="hero-stats">
+            <div><strong>12</strong><span>Properties shortlisted this week</span></div>
+            <div><strong>6</strong><span>Deals closed in Hyderabad last month</span></div>
+            <div><strong>24</strong><span>Hour response guarantee</span></div>
           </div>
         </div>
       </section>
@@ -224,11 +234,15 @@
             <button class="favorite" type="button" aria-label="Add to favorites">
               <i data-lucide="heart"></i>
             </button>
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Modern fitted office space" />
+            <img loading="lazy" src="assets/hitec.jpg" alt="Modern fitted office interior, HITEC City style" />
             <div class="property-body">
               <span class="tag">Office Spaces</span>
               <h3>Grade A Managed Office Floor</h3>
               <p>HITEC City, near Jubilee Enclave</p>
+              <div class="status-row">
+                <span class="pill pill-success">Ready to move</span>
+                <span class="pill">24-hour site visit</span>
+              </div>
               <dl>
                 <div><dt>Area</dt><dd>18,500 sq.ft.</dd></div>
                 <div><dt>Price</dt><dd>On Request</dd></div>
@@ -244,11 +258,15 @@
             <button class="favorite" type="button" aria-label="Add to favorites">
               <i data-lucide="heart"></i>
             </button>
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Commercial building exterior" />
+            <img loading="lazy" src="assets/financial.jpg" alt="Commercial building exterior, Financial District style" />
             <div class="property-body">
               <span class="tag">Commercial Buildings</span>
               <h3>Standalone Corporate Building</h3>
               <p>Financial District, Hyderabad</p>
+              <div class="status-row">
+                <span class="pill pill-warning">Prime corporate asset</span>
+                <span class="pill">Sale & Lease options</span>
+              </div>
               <dl>
                 <div><dt>Area</dt><dd>72,000 sq.ft.</dd></div>
                 <div><dt>Price</dt><dd>Sale / Lease</dd></div>
@@ -264,11 +282,15 @@
             <button class="favorite" type="button" aria-label="Add to favorites">
               <i data-lucide="heart"></i>
             </button>
-            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80" alt="Retail frontage in a commercial area" />
+            <img loading="lazy" src="assets/madhapur.jpg" alt="High street retail frontage, Madhapur style" />
             <div class="property-body">
               <span class="tag">Retail Shops</span>
               <h3>High Street Retail Frontage</h3>
               <p>Madhapur main business stretch</p>
+              <div class="status-row">
+                <span class="pill pill-success">High footfall frontage</span>
+                <span class="pill">Flexible rental terms</span>
+              </div>
               <dl>
                 <div><dt>Area</dt><dd>2,800 sq.ft.</dd></div>
                 <div><dt>Price</dt><dd>On Request</dd></div>
@@ -284,11 +306,15 @@
             <button class="favorite" type="button" aria-label="Add to favorites">
               <i data-lucide="heart"></i>
             </button>
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" alt="Coworking floor with workstations" />
+            <img loading="lazy" src="assets/gachibowli.jpg" alt="Coworking floor with workstations, Gachibowli style" />
             <div class="property-body">
               <span class="tag">Coworking Spaces</span>
               <h3>Enterprise Coworking Campus</h3>
               <p>Gachibowli tech corridor</p>
+              <div class="status-row">
+                <span class="pill pill-success">Flexible coworking</span>
+                <span class="pill">Move-in ready</span>
+              </div>
               <dl>
                 <div><dt>Seats</dt><dd>50-500 seats</dd></div>
                 <div><dt>Price</dt><dd>Per seat</dd></div>
@@ -443,6 +469,7 @@
         <div>
           <p class="eyebrow dark">Contact Us</p>
           <h2>Tell us what kind of commercial space you need.</h2>
+          <p class="contact-note">Send your requirement and our Hyderabad team will share shortlisted options within 2 hours.</p>
           <form class="lead-form" id="leadForm">
             <div class="form-row">
               <label>Name<input type="text" name="name" required /></label>
@@ -525,7 +552,7 @@
       <button class="modal-close" type="button" aria-label="Close details"><i data-lucide="x"></i></button>
       <div class="modal-grid">
         <div>
-          <img id="modalImage" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Selected commercial property" />
+          <img id="modalImage" loading="lazy" src="assets/hitec.jpg" alt="Selected commercial property" />
           <div class="modal-actions">
             <button class="btn btn-primary" type="button" data-open-visit>Schedule Visit</button>
             <button class="btn btn-outline" type="button" id="brochureButton"><i data-lucide="download"></i> Brochure</button>

@@ -175,10 +175,10 @@ const propertyModal = document.querySelector("#propertyModal");
 const modalTitle = document.querySelector("#modalTitle");
 const modalImage = document.querySelector("#modalImage");
 const imageByTitle = {
-  "Grade A Managed Office Floor": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-  "Standalone Corporate Building": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-  "High Street Retail Frontage": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
-  "Enterprise Coworking Campus": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+  "Grade A Managed Office Floor": "assets/hitec.jpg",
+  "Standalone Corporate Building": "assets/financial.jpg",
+  "High Street Retail Frontage": "assets/madhapur.jpg",
+  "Enterprise Coworking Campus": "assets/gachibowli.jpg",
 };
 
 document.querySelectorAll(".open-detail").forEach((button) => {
